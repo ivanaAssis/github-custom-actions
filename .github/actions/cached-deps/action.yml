@@ -23,6 +23,6 @@ runs:
       if: steps.cache.outputs.cache-hit != 'true' || inputs.caching != 'true'
       run: |
         npm ci
-        echo "cache='${{inputs.caching}}'" >> $GITHUB_OUTPUT
+        echo "cache-used=${{ inputs.caching }}" >> $GITHUB_OUTPUT
       shell: bash
       id: install
